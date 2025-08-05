@@ -19,7 +19,6 @@ function WeatherProvider({ children }) {
 
         if (cw) {
           setCurrentWeather(cw);
-          console.log(currentWeather);
         } else {
           setError("Failed to fetch weather data.");
         }

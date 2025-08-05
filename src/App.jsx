@@ -8,7 +8,7 @@ import WeatherContext from "./context/weather.context";
 
 function App() {
   const { loader, currentWeather } = useContext(WeatherContext);
-  // const data = getCurrentWeather()
+  console.log(currentWeather);
 
   return (
     <>
@@ -17,7 +17,7 @@ function App() {
           <Loader />
         ) : (
           <div className="weather-container">
-            <Greetings />
+            <Greetings timezone={currentWeather?.timezone} />
             <Search />
             <WeatherData data={currentWeather?.current} />
           </div>

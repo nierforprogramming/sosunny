@@ -1,18 +1,28 @@
 // Function to get Time
-export function getHours(){
-    const  hours = new Date()
-    return hours.getHours()
+export function getHours(timezone = 'America/New_York'){
+    const now = new Date();
+  const options = {
+    hour: 'numeric',
+    hour12: false,
+    timeZone: timezone
+  };
+  const formatter = new Intl.DateTimeFormat('en-US', options);
+  return parseInt(formatter.format(now));
 }
 
 // get time in 12 hours
 
-export function getHoursInTwelve() {
-    const date =  new Date()
-    const actualHour = date.toLocaleString([], {
-        hour: "2-digit",
-        minute: '2-digit'
-    })
-return actualHour
+export function getHoursInTwelve(timezone = 'America/New_York') {
+   const date = new Date();
+
+  const formattedHour = date.toLocaleString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true, // ensures 12-hour format (AM/PM)
+    timeZone: timezone,
+  });
+
+  return formattedHour;
 }
 
 // Function to greet
@@ -31,13 +41,13 @@ export function greet(currentTime) {
 
 // Default Place
 export const DEFAULT_PLACE = {
-    name: "Bhimdatta N.P.",
-    place_id: "bhimdatta-np-8469141",
-    adm_area1: "Sudurpashchim Pradesh",
-    adm_area2: "Kanchanpur",
-    country: "Federal Democratic Republic of Nepal",
-    lat: "29.0067N",
-    lon: "80.16958E",
-    timezone: "Asia/Kathmandu",
-    type: "settlement"
+  name:"New York",
+place_id:"new-york-city",
+adm_area1:"New York",
+adm_area2:null,
+country:"United States of America",
+lat:"40.71427N",
+lon:"74.00597W",
+timezone:"America/New_York",
+type:"settlement",
 }

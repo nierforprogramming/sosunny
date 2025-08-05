@@ -15,7 +15,7 @@ const options = {
     units: measurementSystem
   },
   headers: {
-    'x-rapidapi-key': 'bff2b3c8b7msha30dfa64a6e0509p1682d5jsnb93370ddcde5',
+    'x-rapidapi-key': import.meta.env.VITE_API_KEY,
     'x-rapidapi-host': 'ai-weather-by-meteosource.p.rapidapi.com'
   }
 };

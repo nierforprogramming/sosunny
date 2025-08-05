@@ -2,16 +2,16 @@ import { useEffect } from "react";
 import { getHours, getHoursInTwelve, greet } from "../utils/utils";
 import { useState } from "react";
 
-function Greetings() {
+function Greetings({ timezone }) {
   const [currentDay, setCurrentDay] = useState();
   const [currentDayTwelve, setCurrentDayTwelve] = useState();
 
   useEffect(() => {
     function getCurrentTime() {
-      const currentD = greet(getHours());
+      const currentD = greet(getHours(timezone));
       console.log(currentD);
 
-      const currentDT = getHoursInTwelve();
+      const currentDT = getHoursInTwelve(timezone);
       //   const currentDT = getHoursInTwelve();
       setCurrentDay(currentD.title);
       document.body.classList.remove(
@@ -25,9 +25,6 @@ function Greetings() {
     }
 
     getCurrentTime();
-    const updateTime = setInterval(getCurrentTime, 1000);
-
-    return () => clearInterval(updateTime);
   }, []);
 
   return (
