@@ -17,13 +17,16 @@ return actualHour
 
 // Function to greet
 export function greet(currentTime) {
-    if (currentTime  <= 23 && currentTime >= 20) return 'Good Night'
+    if (currentTime  <= 23 && currentTime >= 20) return {title: 'Good Night', color: 'night'}
     
-    if(currentTime <= 19 && currentTime >= 17 ) return 'Good Evening'
+    if(currentTime <= 19 && currentTime >= 17 ) return {title: 'Good Evening', color: 'evening'}
+    
 
-    if(currentTime <= 16 && currentTime >= 12) return 'Good Afternoon'
+    if(currentTime <= 16 && currentTime >= 12) return {title: 'Good Afternoon', color: 'afternoon'}
+    
 
-    return 'Good Morning'
+    return {title: 'Good Morning', color: 'morning'}
+    
 }
 
 // Default Place

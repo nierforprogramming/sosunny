@@ -21,7 +21,7 @@ export const WeatherData = ({ data }) => {
         <div className="weather-data-right">
           <div className="weather-unit">
             <div className="weather-number">
-              {data?.temperature}
+              {Math.floor(data?.temperature)}
               <span>&deg;</span>
             </div>
 
@@ -30,7 +30,7 @@ export const WeatherData = ({ data }) => {
 
           <div className="flex weather-feels-container">
             <div className="weather-feels-like">
-              Feels Like {data?.feels_like}
+              Feels Like {Math.ceil(data?.feels_like)}
               <sup>&deg;</sup> C
             </div>
 

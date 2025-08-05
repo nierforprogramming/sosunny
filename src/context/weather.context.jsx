@@ -15,7 +15,7 @@ function WeatherProvider({ children }) {
     async function _getCurrentWeather() {
       try {
         setLoader(true);
-        const cw = await getCurrentWeather("current", place.place_id, "auto");
+        const cw = await getCurrentWeather("current", place.place_id, "metric");
 
         if (cw) {
           setCurrentWeather(cw);
@@ -32,7 +32,7 @@ function WeatherProvider({ children }) {
     }
 
     _getCurrentWeather();
-  }, []);
+  }, [place]);
 
   return (
     <WeatherContext.Provider

@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   min-height: 100vh;
   overflow: hidden;
   min-height: 100dvh;
@@ -19,9 +19,61 @@ body {
     hsl(217, 67%, 54%) 100%
   );
 
-  /* background-color: hsl(0, 3%, 15%);
-  background-image: radial-gradient(ellipse farthest-side at left top, hsl(0, 2%, 47%) 0%, hsl(0, 5%, 15%) 100%); */
+  background-color: hsl(0, 3%, 15%);
+  background-image: radial-gradient(ellipse farthest-side at left top, hsl(0, 2%, 47%) 0%, hsl(0, 5%, 15%) 100%);
   font-family: "Poppins", sans-serif;
+}
+ */
+
+/* Default fallback */
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: white;
+  font-weight: 200;
+  transition: background 1s ease;
+}
+
+/* 🌅 Morning — soft yellow/orange light */
+body.morning {
+  background-color: hsl(210, 80%, 75%);
+  background-image: radial-gradient(
+    ellipse farthest-side at left top,
+    hsl(30, 100%, 80%) 0%,
+    hsl(210, 80%, 75%) 100%
+  );
+}
+
+/* ☀️ Afternoon — bright, clear blue sky */
+body.afternoon {
+  background-color: hsl(200, 100%, 70%);
+  background-image: radial-gradient(
+    ellipse farthest-side at top center,
+    hsl(195, 100%, 80%) 0%,
+    hsl(200, 100%, 70%) 100%
+  );
+}
+
+/* 🌇 Evening — warm orange-pink glow */
+body.evening {
+  background-color: hsl(330, 80%, 65%);
+  background-image: radial-gradient(
+    ellipse farthest-side at bottom right,
+    hsl(20, 100%, 70%) 0%,
+    hsl(330, 80%, 65%) 100%
+  );
+}
+
+/* 🌙 Night — deep blue/indigo tones */
+body.night {
+  background-color: hsl(240, 60%, 15%);
+  background-image: radial-gradient(
+    ellipse farthest-side at bottom,
+    hsl(230, 40%, 25%) 0%,
+    hsl(240, 60%, 15%) 100%
+  );
 }
 
 .weather-container {
