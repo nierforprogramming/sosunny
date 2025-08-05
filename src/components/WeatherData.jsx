@@ -5,7 +5,7 @@ import { useContext } from "react";
 import WeatherContext from "../context/weather.context";
 
 export const WeatherData = ({ data }) => {
-  console.log(data);
+  //   console.log(data);
 
   const { place } = useContext(WeatherContext);
 
@@ -14,14 +14,14 @@ export const WeatherData = ({ data }) => {
       <div className="weather-data-container text-center">
         <div className="weather-data-left">
           <div className="weather-icon">
-            <Icon source={`${data.icon_num}.png`} />
+            <Icon source={`${data?.icon_num}.png`} />
           </div>
         </div>
 
         <div className="weather-data-right">
           <div className="weather-unit">
             <div className="weather-number">
-              {data.temperature}
+              {data?.temperature}
               <span>&deg;</span>
             </div>
 
@@ -30,11 +30,11 @@ export const WeatherData = ({ data }) => {
 
           <div className="flex weather-feels-container">
             <div className="weather-feels-like">
-              Feels Like {data.feels_like}
+              Feels Like {data?.feels_like}
               <sup>&deg;</sup> C
             </div>
 
-            <div className="weather-condition">{data.summary}</div>
+            <div className="weather-condition">{data?.summary}</div>
           </div>
 
           <div className="city-location bold">
@@ -45,12 +45,12 @@ export const WeatherData = ({ data }) => {
           <div className="weather-extra-data flex">
             <WiHumidity className="icon" />
             <div className="humidity flex">
-              <span>{data.humidity}%</span>
+              <span>{data?.humidity}%</span>
               Humidity
             </div>
             <WiWindy className="icon" />
             <div className="wind-speed flex">
-              <span>{data.wind.speed} Km/h</span>
+              <span>{data?.wind.speed} Km/h</span>
               Wind Speed
             </div>
           </div>
