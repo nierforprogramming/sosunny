@@ -5,8 +5,6 @@ import { useContext } from "react";
 import WeatherContext from "../context/weather.context";
 
 export const WeatherData = ({ data }) => {
-  //   console.log(data);
-
   const { place } = useContext(WeatherContext);
 
   return (

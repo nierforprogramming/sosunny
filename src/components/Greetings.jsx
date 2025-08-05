@@ -9,7 +9,6 @@ function Greetings({ timezone }) {
   useEffect(() => {
     function getCurrentTime() {
       const currentD = greet(getHours(timezone));
-      console.log(currentD);
 
       const currentDT = getHoursInTwelve(timezone);
       //   const currentDT = getHoursInTwelve();

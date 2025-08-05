@@ -8,7 +8,6 @@ import WeatherContext from "./context/weather.context";
 
 function App() {
   const { loader, currentWeather } = useContext(WeatherContext);
-  console.log(currentWeather);
 
   return (
     <>
