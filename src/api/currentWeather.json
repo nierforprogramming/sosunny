@@ -1,0 +1,24 @@
+{
+  "lat": "29.0067N",
+  "lon": "80.16958E",
+  "elevation": 243,
+  "timezone": "Asia/Kathmandu",
+  "units": "metric",
+  "current": {
+    "icon": "clear",
+    "icon_num": 2,
+    "summary": "Clear",
+    "temperature": 25.0,
+    "feels_like": 25.0,
+    "wind_chill": 27.0,
+    "dew_point": -2.8,
+    "wind": { "speed": 1.4, "gusts": 6.0, "angle": 236, "dir": "SW" },
+    "precipitation": { "total": 0.0, "type": "none" },
+    "cloud_cover": 0.0,
+    "ozone": 286.68,
+    "pressure": 1013,
+    "uv_index": 0.0,
+    "humidity": 15,
+    "visibility": 24.13
+  }
+}

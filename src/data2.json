@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Bhimdatta",
+    "place_id": "bhimdatta-12095610",
+    "adm_area1": "Sudurpashchim Pradesh",
+    "adm_area2": "Kanchanpur",
+    "country": "Federal Democratic Republic of Nepal",
+    "lat": "29.01615N",
+    "lon": "80.17194E",
+    "timezone": "Asia/Kathmandu",
+    "type": "administrative_area"
+  },
+  {
+    "name": "Bhimdatta N.P.",
+    "place_id": "bhimdatta-np-8469141",
+    "adm_area1": "Sudurpashchim Pradesh",
+    "adm_area2": "Kanchanpur",
+    "country": "Federal Democratic Republic of Nepal",
+    "lat": "29.0067N",
+    "lon": "80.16958E",
+    "timezone": "Asia/Kathmandu",
+    "type": "settlement"
+  }
+]
