@@ -5,7 +5,8 @@ import { useContext } from "react";
 import WeatherContext from "../context/weather.context";
 
 export const WeatherData = ({ data }) => {
-  const { place } = useContext(WeatherContext);
+  const { place, error } = useContext(WeatherContext);
+  console.log(error);
 
   return (
     <section id="weather-data">
@@ -53,6 +54,7 @@ export const WeatherData = ({ data }) => {
             </div>
           </div>
         </div>
+        <div className="error">{error ? <p>{error}</p> : ""}</div>
       </div>
     </section>
   );

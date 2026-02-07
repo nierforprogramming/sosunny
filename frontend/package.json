@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "dev-api": "npx json-server data.json",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

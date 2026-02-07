@@ -8,27 +8,36 @@
   width: 60px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(
-      var(--r1) var(--r2) at top,
-      #0000 79.5%,
-      #269af2 80%
-    ),
+  background:
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%),
     radial-gradient(var(--r1) var(--r2) at bottom, #269af2 79.5%, #0000 80%),
     radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%), #ccc;
   background-size: 50.5% 220%;
-  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-position:
+    -100% 0%,
+    0% 0%,
+    100% 0%;
   background-repeat: no-repeat;
   animation: l9 2s infinite linear;
 }
 @keyframes l9 {
   33% {
-    background-position: 0% 33%, 100% 33%, 200% 33%;
+    background-position:
+      0% 33%,
+      100% 33%,
+      200% 33%;
   }
   66% {
-    background-position: -100% 66%, 0% 66%, 100% 66%;
+    background-position:
+      -100% 66%,
+      0% 66%,
+      100% 66%;
   }
   100% {
-    background-position: 0% 100%, 100% 100%, 200% 100%;
+    background-position:
+      0% 100%,
+      100% 100%,
+      200% 100%;
   }
 }
 
@@ -143,6 +152,15 @@
 
 .icon {
   font-size: 3.5rem;
+}
+
+.error {
+  color: rgb(119, 7, 7);
+  margin-block: 2em;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: rgba(121, 103, 103, 0.679);
+  border: 1px solid red;
 }
 
 /* Responsive Design */

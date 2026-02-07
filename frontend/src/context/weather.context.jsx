@@ -9,22 +9,28 @@ function WeatherProvider({ children }) {
   const [place, setPlace] = useState(DEFAULT_PLACE);
   const [loader, setLoader] = useState(false);
   const [currentWeather, setCurrentWeather] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     async function _getCurrentWeather() {
       try {
         setLoader(true);
+        setError("");
+
         const cw = await getCurrentWeather("current", place.place_id, "metric");
 
         if (cw) {
           setCurrentWeather(cw);
-        } else {
-          setError("Failed to fetch weather data.");
         }
+        setError(cw);
       } catch (err) {
-        setError("Something went wrong.");
-        console.error(err);
+        console.log(err);
+
+        const message =
+          err.response?.data?.message ||
+          "Something went wrong. Please try again later.";
+
+        setError(message);
       } finally {
         setLoader(false);
       }
@@ -35,7 +41,7 @@ function WeatherProvider({ children }) {
 
   return (
     <WeatherContext.Provider
-      value={{ place, setPlace, loader, currentWeather, error }}
+      value={{ place, setPlace, loader, currentWeather, error, setError }}
     >
       {children}
     </WeatherContext.Provider>

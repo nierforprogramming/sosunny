@@ -1,0 +1,114 @@
+{
+  "find_places": [
+    {
+      "name": "North Charleston",
+      "place_id": "north-charleston",
+      "adm_area1": "South Carolina",
+      "adm_area2": "Charleston County",
+      "country": "United States of America",
+      "lat": "32.85462N",
+      "lon": "79.97481W",
+      "timezone": "America/New_York",
+      "type": "settlement"
+    },
+    {
+      "name": "Ina",
+      "place_id": "ina",
+      "adm_area1": "Nagano",
+      "adm_area2": "Ina-shi",
+      "country": "Japan",
+      "lat": "35.82756N",
+      "lon": "137.95378E",
+      "timezone": "Asia/Tokyo",
+      "type": "settlement"
+    },
+    {
+      "name": "North Tonawanda",
+      "place_id": "north-tonawanda",
+      "adm_area1": "New York",
+      "adm_area2": "Niagara",
+      "country": "United States of America",
+      "lat": "43.03867N",
+      "lon": "78.8642W",
+      "timezone": "America/New_York",
+      "type": "settlement"
+    },
+    {
+      "name": "North Bethesda",
+      "place_id": "north-bethesda",
+      "adm_area1": "Maryland",
+      "adm_area2": "Montgomery",
+      "country": "United States of America",
+      "lat": "39.04455N",
+      "lon": "77.11887W",
+      "timezone": "America/New_York",
+      "type": "settlement"
+    },
+    {
+      "name": "Ingeniero Guillermo N. Juárez",
+      "place_id": "ingeniero-guillermo-n-juarez",
+      "adm_area1": "Formosa",
+      "adm_area2": "Departamento de Matacos",
+      "country": "Argentine Republic",
+      "lat": "23.9S",
+      "lon": "61.85W",
+      "timezone": "America/Argentina/Cordoba",
+      "type": "settlement"
+    },
+    {
+      "name": "North Lawrence",
+      "place_id": "north-lawrence-5164820",
+      "adm_area1": "Ohio",
+      "adm_area2": "Stark",
+      "country": "United States of America",
+      "lat": "40.83978N",
+      "lon": "81.62846W",
+      "timezone": "America/New_York",
+      "type": "settlement"
+    },
+    {
+      "name": "San Francisco",
+      "place_id": "san-francisco-3822249",
+      "adm_area1": "Yucatán",
+      "adm_area2": "Panabá",
+      "country": "Mexico",
+      "lat": "21.39152N",
+      "lon": "88.3287W",
+      "timezone": "America/Merida",
+      "type": "settlement"
+    },
+    {
+      "name": "Borgo I.N.A.",
+      "place_id": "borgo-ina-8959945",
+      "adm_area1": "Veneto",
+      "adm_area2": "Venice",
+      "country": "Italy",
+      "lat": "45.51598N",
+      "lon": "12.63827E",
+      "timezone": "Europe/Rome",
+      "type": "settlement"
+    },
+    {
+      "name": "Zona I.N.I. (P.I.P. Consortile)",
+      "place_id": "zona-ini-pip-consortile-8980776",
+      "adm_area1": "Piedmont",
+      "adm_area2": "Province of Turin",
+      "country": "Italy",
+      "lat": "45.38803N",
+      "lon": "7.73002E",
+      "timezone": "Europe/Rome",
+      "type": "settlement"
+    },
+    {
+      "name": "Enna",
+      "place_id": "enna-6541871",
+      "adm_area1": "Sicily",
+      "adm_area2": "Province of Enna",
+      "country": "Italy",
+      "lat": "37.55885N",
+      "lon": "14.28917E",
+      "timezone": "Europe/Rome",
+      "type": "administrative_area"
+    }
+  ]
+}
