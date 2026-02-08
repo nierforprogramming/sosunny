@@ -28,8 +28,6 @@ export const apiUsageMiddleware = async (req, res, next) => {
       apiApp.apiCallsUsed = 0;
     }
 
-    console.log(apiApp.limit);
-
     // Reset monthly quota
     if (now >= apiApp.resetAt) {
       apiApp.apiCallsUsed = 0;

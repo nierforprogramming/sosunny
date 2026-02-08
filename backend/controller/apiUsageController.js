@@ -3,7 +3,7 @@ import { sanitizeAppName } from "../utils/utils.js";
 
 export async function createAPIApp(req, res) {
   try {
-    let { appName, limit } = req.query;
+    let { appName, limit, apiCallsUsed } = req.query;
 
     if (typeof appName !== "string") {
       return res.status(400).json({
@@ -21,7 +21,11 @@ export async function createAPIApp(req, res) {
       });
     }
 
-    const createdApp = await APIAppSchema.create({ appName, limit });
+    const createdApp = await APIAppSchema.create({
+      appName,
+      limit,
+      apiCallsUsed,
+    });
 
     return res.status(201).json({
       success: true,

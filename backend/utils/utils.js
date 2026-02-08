@@ -1,7 +1,5 @@
 export function getNextResetDate() {
   const now = new Date();
-  console.log(new Date(now.getFullYear(), now.getMonth() + 1, 1));
-
   return new Date(now.getFullYear(), now.getMonth() + 1, 1);
 }
 

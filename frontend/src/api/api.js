@@ -7,7 +7,7 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
   const options = {
     method: "GET",
     headers: {
-      "x-api-key": "698750ac14cbd6429397b181",
+      "x-api-key": "6988176b77cf7d8bc76f3109",
     },
     url: `http://localhost:3001/weather/${endpoint}`,
     // url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
@@ -36,7 +36,7 @@ export async function searchWeather(text) {
   const options = {
     method: "GET",
     headers: {
-      "x-api-key": "698750ac14cbd6429397b181",
+      "x-api-key": "6988176b77cf7d8bc76f3109",
     },
     url: `http://localhost:3001/weather/find_places`,
 
