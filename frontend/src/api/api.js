@@ -4,8 +4,6 @@ import axios from "axios";
 // }
 
 export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
-  console.log(place_id, endpoint);
-
   const options = {
     method: "GET",
     headers: {
@@ -13,6 +11,7 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
     },
     url: `https://ratelimitapi.vercel.app/weather/${endpoint}`,
     // url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
+    // url: `http://localhost:3001/weather/current`,
     params: {
       place_id,
       timezone: "auto",
@@ -23,12 +22,7 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
 
   try {
     const response = await axios.request(options);
-    const warning = response.headers["x-ratelimit-warning"] || null;
-    console.log(response);
-    return {
-      data: response.data,
-      warning,
-    };
+    return response.data;
   } catch (error) {
     console.log(error);
 
@@ -47,6 +41,7 @@ export async function searchWeather(text) {
       "x-api-key": "69882e8f80aab4fbdabb5938",
     },
     url: "https://ratelimitapi.vercel.app/weather/find_place",
+    // url: `http://localhost:3001/weather/find_places`,
 
     // url: "https://ai-weather-by-meteosource.p.rapidapi.com/find_places",
     params: {
@@ -58,8 +53,6 @@ export async function searchWeather(text) {
     const response = await axios.request(options);
     return response.data;
   } catch (error) {
-    console.log(error);
-
     return (
       error.response?.data?.message ||
       "Something went wrong. Please try again later."

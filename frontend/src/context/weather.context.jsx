@@ -18,15 +18,12 @@ function WeatherProvider({ children }) {
         setError("");
 
         const cw = await getCurrentWeather("current", place.place_id, "metric");
-        console.log(cw);
 
         if (cw) {
           setCurrentWeather(cw);
         }
         setError(cw);
       } catch (err) {
-        console.log(err);
-
         const message =
           err.response?.data?.message ||
           "Something went wrong. Please try again later.";
