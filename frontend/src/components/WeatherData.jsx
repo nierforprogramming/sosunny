@@ -1,4 +1,4 @@
-import { FaCloud, FaSun } from "react-icons/fa6";
+import { MdCancel } from "react-icons/md";
 import { Icon } from "./Icon";
 import { WiHumidity, WiWindy } from "react-icons/wi";
 import { useContext } from "react";
@@ -54,7 +54,15 @@ export const WeatherData = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="error">{error ? <p>{error}</p> : ""}</div>
+        <div className="error">
+          <span className="icon">
+            <MdCancel />
+          </span>
+          <div className="error-container">
+            <p className="title">Error!</p>
+            {error ? <p className="content">{error}</p> : ""}
+          </div>
+        </div>
       </div>
     </section>
   );
