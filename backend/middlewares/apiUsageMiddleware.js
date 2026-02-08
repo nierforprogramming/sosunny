@@ -44,12 +44,12 @@ export const apiUsageMiddleware = async (req, res, next) => {
 
     // Soft warning
     if (apiApp.apiCallsUsed >= apiApp.limit * 0.9) {
-      return res.status(429).json({
-        success: false,
-        message: `You are close to your limit. Remaining calls this month: ${
+      res.setHeader(
+        "X-RateLimit-Warning",
+        `You are close to your limit. Remaining calls this month: ${
           apiApp.limit - apiApp.apiCallsUsed
         }`,
-      });
+      );
     }
 
     // Count the call

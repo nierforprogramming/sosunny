@@ -18,6 +18,7 @@ function WeatherProvider({ children }) {
         setError("");
 
         const cw = await getCurrentWeather("current", place.place_id, "metric");
+        console.log(cw);
 
         if (cw) {
           setCurrentWeather(cw);

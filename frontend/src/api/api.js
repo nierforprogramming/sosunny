@@ -23,9 +23,12 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
 
   try {
     const response = await axios.request(options);
+    const warning = response.headers["x-ratelimit-warning"] || null;
     console.log(response);
-
-    return response.data;
+    return {
+      data: response.data,
+      warning,
+    };
   } catch (error) {
     console.log(error);
 
