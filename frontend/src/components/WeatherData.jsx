@@ -20,7 +20,7 @@ export const WeatherData = ({ data }) => {
         <div className="weather-data-right">
           <div className="weather-unit">
             <div className="weather-number">
-              {Math.floor(data?.temperature)}
+              {Math.floor(data?.temperature || 0)}
               <span>&deg;</span>
             </div>
 
@@ -29,7 +29,7 @@ export const WeatherData = ({ data }) => {
 
           <div className="flex weather-feels-container">
             <div className="weather-feels-like">
-              Feels Like {Math.ceil(data?.feels_like)}
+              Feels Like {Math.ceil(data?.feels_like || 0)}
               <sup>&deg;</sup> C
             </div>
 
@@ -37,19 +37,19 @@ export const WeatherData = ({ data }) => {
           </div>
 
           <div className="city-location bold">
-            {place.name}
+            {place?.name}
             {/* <span>AE</span> */}
           </div>
 
           <div className="weather-extra-data flex">
             <WiHumidity className="icon" />
             <div className="humidity flex">
-              <span>{data?.humidity}%</span>
+              <span>{data?.humidity || 0}%</span>
               Humidity
             </div>
             <WiWindy className="icon" />
             <div className="wind-speed flex">
-              <span>{data?.wind.speed} Km/h</span>
+              <span>{data?.wind.speed || 0} Km/h</span>
               Wind Speed
             </div>
           </div>

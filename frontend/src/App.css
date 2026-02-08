@@ -155,11 +155,14 @@
 }
 
 .error {
+  position: absolute;
+  bottom: 0;
   color: rgb(119, 7, 7);
   margin-block: 2em;
   font-size: 1.2rem;
+  padding: 1em;
   font-weight: 500;
-  background-color: rgba(121, 103, 103, 0.679);
+  background-color: rgba(255, 159, 138, 0.6);
   border: 1px solid red;
 }
 
