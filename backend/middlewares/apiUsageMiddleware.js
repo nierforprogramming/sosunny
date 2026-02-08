@@ -58,6 +58,8 @@ export const apiUsageMiddleware = async (req, res, next) => {
 
     req.appData = apiApp;
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({ success: false, message: error.message });
   }
   next();
