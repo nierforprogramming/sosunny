@@ -9,7 +9,7 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
     headers: {
       "x-api-key": "69882e8f80aab4fbdabb5938",
     },
-    url: `https://ratelimitapi.vercel.app/weather/${endpoint}`,
+    url: `https://ratelimitapi.vercel.app/api/weather/${endpoint}`,
     // url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
     // url: `http://localhost:3001/weather/current`,
     params: {
@@ -40,7 +40,7 @@ export async function searchWeather(text) {
     headers: {
       "x-api-key": "69882e8f80aab4fbdabb5938",
     },
-    url: "https://ratelimitapi.vercel.app/weather/find_place",
+    url: "https://ratelimitapi.vercel.app/api/weather/find_place",
     // url: `http://localhost:3001/weather/find_places`,
 
     // url: "https://ai-weather-by-meteosource.p.rapidapi.com/find_places",
