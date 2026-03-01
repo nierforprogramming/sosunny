@@ -11,7 +11,7 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
     },
     // url: `https://apisosunnyv2.vercel.app/api/weather/${endpoint}`,
     // url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
-    url: `https://sosunnyv2.vercel.app/api/weather/${endpoint}`,
+    url: `https://apisosunnyv2.vercel.app/api/weather/${endpoint}`,
     params: {
       place_id,
       timezone: "auto",
@@ -42,7 +42,7 @@ export async function searchWeather(text) {
     },
 
     // url: "https://apisosunnyv2.vercel.app/api/weather/find_place",
-    url: `https://sosunnyv2.vercel.app/api/weather/find_places`,
+    url: `https://apisosunnyv2.vercel.app/api/weather/find_places`,
 
     // url: "https://ai-weather-by-meteosource.p.rapidapi.com/find_places",
     params: {
