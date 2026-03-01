@@ -1,3 +1,4 @@
+// src/components/Search.jsx
 import React, { useContext, useState } from "react";
 import { searchWeather } from "../api/api";
 import WeatherContext from "../context/weather.context";
@@ -5,6 +6,7 @@ import WeatherContext from "../context/weather.context";
 export const Search = () => {
   const [text, setText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
   const { setPlace, setError } = useContext(WeatherContext);
 
   const onSearch = async (e) => {
@@ -15,23 +17,26 @@ export const Search = () => {
 
     if (!trimmed) {
       setSearchResults([]);
+      setError("");
       return;
     }
 
-    const data = await searchWeather(trimmed);
+    const res = await searchWeather(trimmed);
 
-    if (Array.isArray(data)) {
-      setSearchResults(data);
+    if (res.success) {
+      setSearchResults(res.data);
       setError("");
+    } else {
+      setSearchResults([]);
+      setError(res.message);
     }
-
-    setError(data);
   };
 
   const changePlace = (place) => {
     setPlace(place);
     setText("");
     setSearchResults([]);
+    setError("");
   };
 
   return (
@@ -48,8 +53,8 @@ export const Search = () => {
           <div className="results-container">
             {searchResults.map((result) => (
               <div
-                className="result"
                 key={result.place_id}
+                className="result"
                 onClick={() => changePlace(result)}
               >
                 {result.name}, {result.adm_area1}, {result.country}

@@ -6,6 +6,7 @@ import WeatherContext from "../context/weather.context";
 
 export const WeatherData = ({ data }) => {
   const { place, error } = useContext(WeatherContext);
+
   return (
     <section id="weather-data">
       <div className="weather-data-container text-center">
@@ -47,20 +48,22 @@ export const WeatherData = ({ data }) => {
             </div>
             <WiWindy className="icon" />
             <div className="wind-speed flex">
-              <span>{data?.wind.speed || 0} Km/h</span>
+              <span>{data?.wind?.speed || 0} Km/h</span>
               Wind Speed
             </div>
           </div>
         </div>
-        <div className="error">
-          <span className="icon">
-            <MdCancel />
-          </span>
-          <div className="error-container">
-            <p className="title">Error!</p>
-            {error ? <p className="content">{error}</p> : ""}
+        {error && (
+          <div className="error">
+            <span className="icon">
+              <MdCancel />
+            </span>
+            <div className="error-container">
+              <p className="title">Error!</p>
+              <p className="content">{error}</p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
