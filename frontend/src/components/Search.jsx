@@ -28,7 +28,7 @@ export const Search = () => {
       setError("");
     } else {
       setSearchResults([]);
-      setError(res.message);
+      setError(res);
     }
   };
 
