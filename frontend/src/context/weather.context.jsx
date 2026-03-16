@@ -16,17 +16,16 @@ function WeatherProvider({ children }) {
       try {
         setLoader(true);
         setError("");
-
         const cw = await getCurrentWeather("current", place.place_id, "metric");
         if (cw?.data) {
           setCurrentWeather(cw.data);
-          setError("");
         }
+
+        return setError(cw);
       } catch (err) {
         const message =
           err.response?.data?.message ||
           "Something went wrong. Please try again later.";
-
         setError(message);
       } finally {
         setLoader(false);
@@ -35,7 +34,6 @@ function WeatherProvider({ children }) {
 
     _getCurrentWeather();
   }, [place]);
-
   return (
     <WeatherContext.Provider
       value={{ place, setPlace, loader, currentWeather, error, setError }}

@@ -6,7 +6,6 @@ import WeatherContext from "../context/weather.context";
 
 export const WeatherData = ({ data }) => {
   const { place, error } = useContext(WeatherContext);
-
   return (
     <section id="weather-data">
       <div className="weather-data-container text-center">

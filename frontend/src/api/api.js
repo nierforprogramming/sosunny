@@ -24,8 +24,6 @@ export async function getCurrentWeather(endpoint, place_id, measurementSystem) {
     const response = await axios.request(options);
     return response.data;
   } catch (error) {
-    console.log(error);
-
     return (
       error.response?.data?.message ||
       "Something went wrong. Please try again later."
